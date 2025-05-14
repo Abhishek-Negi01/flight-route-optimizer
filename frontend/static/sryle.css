@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 2rem;
+  color: #333;
+}
+input, button {
+  padding: 8px;
+  margin: 10px;
+}
+#results {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+.path {
+  margin-bottom: 10px;
+}

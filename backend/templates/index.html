@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FlyFi Route Finder</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>FlyFi - Flight Route Optimizer</h1>
+    <input id="source" placeholder="Source Airport Code (e.g., DEL)">
+    <input id="destination" placeholder="Destination Airport Code (e.g., HYD)">
+    <br>
+    <button onclick="fetchPaths('all')">Find All Paths</button>
+    <button onclick="fetchPaths('dijkstra')">Find Shortest Path</button>
+    <div id="results"></div>
+
+    <script src="../static/script.js"></script>
+</body>
+</html>

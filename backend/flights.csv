@@ -1,0 +1,9 @@
+source,destination,cost
+Delhi,Mumbai,2
+Delhi,Kolkata,4
+Mumbai,Chennai,3
+Kolkata,Chennai,2
+Mumbai,Delhi,2
+Kolkata,Delhi,4
+Chennai,Mumbai,3
+Chennai,Kolkata,2
