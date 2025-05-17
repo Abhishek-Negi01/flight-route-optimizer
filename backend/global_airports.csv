@@ -1,0 +1,121 @@
+ID,Name,Latitude,Longitude
+DEL,Indira Gandhi International Airport,28.5562,77.1000
+BOM,Chhatrapati Shivaji Maharaj International Airport,19.0887,72.8679
+BLR,Kempegowda International Airport,13.1986,77.7066
+MAA,Chennai International Airport,12.9941,80.1707
+HYD,Rajiv Gandhi International Airport,17.2403,78.4294
+CCU,Netaji Subhas Chandra Bose International Airport,22.6547,88.4467
+GOI,Goa International Airport,15.3808,73.8314
+PNQ,Pune Airport,18.5822,73.9197
+AMD,Sardar Vallabhbhai Patel International Airport,23.0772,72.6346
+COK,Cochin International Airport,10.1520,76.4019
+TRV,Trivandrum International Airport,8.4821,76.9204
+GAU,Lokpriya Gopinath Bordoloi International Airport,26.1063,91.5859
+JAI,Jaipur International Airport,26.8242,75.8122
+LKO,Chaudhary Charan Singh Airport,26.7606,80.8893
+IXC,Chandigarh Airport,30.6735,76.7885
+VGA,Vijayawada Airport,16.5304,80.7968
+PAT,Jai Prakash Narayan Airport,25.5913,85.0880
+BHO,Raja Bhoj Airport,23.2875,77.3374
+IXR,Birsa Munda Airport,23.3143,85.3217
+JDH,Jodhpur Airport,26.2511,73.0489
+JFK,John F. Kennedy International Airport,40.6413,-73.7781
+LHR,Heathrow Airport,51.4700,-0.4543
+DXB,Dubai International Airport,25.2532,55.3657
+SIN,Singapore Changi Airport,1.3644,103.9915
+NRT,Narita International Airport,35.7647,140.3863
+SYD,Sydney Airport,-33.9461,151.1772
+CDG,Charles de Gaulle Airport,49.0097,2.5479
+FRA,Frankfurt Airport,50.0379,8.5622
+PEK,Beijing Capital International Airport,40.0799,116.6031
+ICN,Incheon International Airport,37.4602,126.4407
+AMS,Amsterdam Airport Schiphol,52.3081,4.7642
+HKG,Hong Kong International Airport,22.3080,113.9185
+BKK,Suvarnabhumi Airport,13.6811,100.7475
+KUL,Kuala Lumpur International Airport,2.7456,101.7097
+IST,Istanbul Airport,41.2622,28.7278
+MAD,Adolfo Suárez Madrid–Barajas Airport,40.4719,-3.5626
+BCN,Barcelona–El Prat Airport,41.2974,2.0833
+MUC,Munich Airport,48.3538,11.7861
+ZRH,Zurich Airport,47.4647,8.5492
+CPH,Copenhagen Airport,55.6180,12.6560
+OSL,Oslo Airport Gardermoen,60.1939,11.1004
+HEL,Helsinki Airport,60.3172,24.9633
+DUB,Dublin Airport,53.4213,-6.2700
+MAN,Manchester Airport,53.3537,-2.2750
+BRU,Brussels Airport,50.9014,4.4844
+WAW,Warsaw Chopin Airport,52.1657,20.9671
+DME,Domodedovo International Airport,55.4146,37.8993
+LED,Pulkovo Airport,59.8003,30.2625
+KIX,Kansai International Airport,34.4344,135.2442
+MSP,Minneapolis-Saint Paul International Airport,44.8833,-93.2288
+SEA,Seattle-Tacoma International Airport,47.4480,-122.3088
+BOS,Logan International Airport,42.3643,-71.0052
+IAH,George Bush Intercontinental Airport,29.9844,-95.3414
+MCO,Orlando International Airport,28.4294,-81.3090
+PHX,Phoenix Sky Harbor International Airport,33.4342,-112.0081
+EWR,Newark Liberty International Airport,40.6925,-74.1687
+ATL,Hartsfield-Jackson Atlanta International Airport,33.6407,-84.4277
+DFW,Dallas/Fort Worth International Airport,32.8998,-97.0403
+DEN,Denver International Airport,39.8561,-104.6737
+SFO,San Francisco International Airport,37.6189,-122.3750
+LAX,Los Angeles International Airport,33.9416,-118.4085
+ORD,O'Hare International Airport,41.9742,-87.9073
+YYZ,Toronto Pearson International Airport,43.6777,-79.6248
+YVR,Vancouver International Airport,49.1947,-123.1792
+DOH,Hamad International Airport,25.2609,51.6138
+JED,King Abdulaziz International Airport,21.6796,39.1565
+RUH,King Khalid International Airport,24.9578,46.6989
+AUH,Abu Dhabi International Airport,24.4330,54.6511
+MEX,Mexico City International Airport,19.4363,-99.0721
+GRU,São Paulo–Guarulhos International Airport,-23.4326,-46.4695
+EZE,Ministro Pistarini International Airport,-34.8222,-58.5358
+SCL,Arturo Merino Benítez International Airport,-33.3900,-70.7858
+AKL,Auckland Airport,-37.0081,174.7920
+WLG,Wellington International Airport,-41.3272,174.8053
+CPT,Cape Town International Airport,-33.9648,18.6017
+JNB,OR Tambo International Airport,-26.1392,28.2460
+MBA,Moi International Airport,-4.0348,39.5942
+NBO,Jomo Kenyatta International Airport,-1.3217,36.9303
+CAI,Cairo International Airport,30.1219,31.4056
+TLV,Ben Gurion Airport,32.0114,34.8867
+DMM,King Fahd International Airport,26.4712,49.7979
+BAH,Bahrain International Airport,26.2708,50.6336
+KWI,Kuwait International Airport,29.2266,47.9689
+MCT,Muscat International Airport,23.5933,58.2844
+HND,Tokyo Haneda Airport,35.5494,139.7798
+GMP,Gimpo International Airport,37.5583,126.7905
+CTS,New Chitose Airport,42.7752,141.6923
+FUK,Fukuoka Airport,33.5859,130.4507
+OKA,Naha Airport,26.1958,127.6459
+TAO,Qingdao Jiaodong International Airport,36.2661,120.3744
+CAN,Guangzhou Baiyun International Airport,23.3924,113.2990
+PVG,Shanghai Pudong International Airport,31.1434,121.8052
+SZX,Shenzhen Bao'an International Airport,22.6393,113.8107
+CTU,Chengdu Shuangliu International Airport,30.5786,103.9472
+XIY,Xi'an Xianyang International Airport,34.4471,108.7516
+KMG,Kunming Changshui International Airport,24.9924,102.7433
+MEL,Melbourne Airport,-37.6733,144.8433
+TPE,Taiwan Taoyuan International Airport,25.0777,121.2322
+SHA,Shanghai Hongqiao International Airport,31.1979,121.3363
+PER,Perth Airport,-31.9403,115.9669
+SAW,Istanbul Sabiha Gökçen Airport,40.8986,29.3092
+ATH,Athens International Airport,37.9364,23.9445
+TBS,Tbilisi International Airport,41.6692,44.9547
+MOS,Moscow Sheremetyevo Airport,55.9726,37.4126
+LIS,Lisbon Airport,38.7742,-9.1342
+ORY,Paris Orly Airport,48.7253,2.3594
+PMI,Palma de Mallorca Airport,39.5516,2.7388
+AGP,Málaga Airport,36.6749,-4.4991
+VIE,Vienna International Airport,48.1103,16.5697
+PRG,Prague Airport,50.1008,14.2600
+BUD,Budapest Airport,47.4395,19.2618
+ARN,Stockholm Arlanda Airport,59.6519,17.9186
+TLL,Tallinn Airport,59.4133,24.8328
+BGO,Bergen Airport,60.2934,5.2181
+TRD,Trondheim Airport,63.4576,10.9243
+EDI,Edinburgh Airport,55.9500,-3.3725
+LUX,Luxembourg Airport,49.6233,6.2044
+KRK,Kraków Airport,50.0777,19.7848
+SVO,Sheremetyevo International Airport,55.9726,37.4126
+KHH,Kaohsiung International Airport,22.5771,120.3500

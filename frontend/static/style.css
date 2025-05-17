@@ -1,0 +1,145 @@
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #E6F3FF;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  color: #003F70;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 850px;
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(34, 184, 207, 0.2);
+  text-align: center;
+  font-weight: 700;
+}
+
+.logo {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: #22B8CF;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+header p {
+  color: #005B85;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.search-box {
+  background: #F0FAFF;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-left: 6px solid #22B8CF;
+}
+
+.search-box input {
+  padding: 0.9rem;
+  border: 1px solid #B0D9FF;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  background: #F9FDFF;
+  text-align: center;
+  font-weight: 600;
+  color: #003F70;
+  width: 100%;
+}
+
+.search-box input::placeholder {
+  color: #87C2DD;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.buttons button {
+  padding: 0.8rem 1.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: #22B8CF;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px #b0e3f4;
+  transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #1AA3B8;
+  transform: scale(1.03);
+}
+
+#results {
+  margin-top: 1.5rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.path-card {
+  background: #F5FCFF;
+  padding: 1rem;
+  border-left: 5px solid #22B8CF;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#map {
+  border-radius: 12px;
+  box-shadow: 0 0 12px #22B8CF;
+  height: 400px;
+}
+
+/* Autocomplete */
+.autocomplete {
+  position: relative;
+  width: 100%;
+}
+
+.autocomplete-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #22B8CF;
+  border-top: none;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 0 0 10px 10px;
+}
+
+.autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #003f70;
+}
+
+.autocomplete-item:hover {
+  background-color: #22B8CF;
+  color: white;
+}

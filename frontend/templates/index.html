@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FlyFi - Flight Optimizer</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/static/style.css" />
+
+  <!-- Leaflet Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="/static/logo.png" alt="FlyFi Logo" class="logo" />
+      <h1>FlyFi</h1>
+      <p>Find smarter, faster, cheaper flights!</p>
+    </header>
+
+    <section class="search-box">
+      <div class="autocomplete">
+        <input type="text" id="source" placeholder="From (e.g. DEL)" autocomplete="off" />
+        <div id="source-list" class="autocomplete-items"></div>
+      </div>
+      <div class="autocomplete">
+        <input type="text" id="destination" placeholder="To (e.g. BOM)" autocomplete="off" />
+        <div id="destination-list" class="autocomplete-items"></div>
+      </div>
+      <div class="buttons">
+        <button onclick="fetchPaths('all')">All Routes</button>
+        <button onclick="fetchPaths('cost')">Most Efficient Flights</button>
+        <button onclick="fetchPaths('distance')">Shortest Route</button>
+      </div>
+    </section>
+
+    <section id="results"></section>
+    <div id="map" style="height: 400px; margin-top: 2rem;"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/static/script.js"></script>
+  <script src="/static/map.js"></script>
+  <script src="/static/autocomplete.js"></script>
+</body>
+</html>
