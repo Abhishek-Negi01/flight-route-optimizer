@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>FlyFi - Flight Optimizer</title>
+  <title>FlyFi - Flight Route Optimizer</title>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/static/style.css" />
 
-  <!-- Leaflet Map -->
+  <!-- Map (Leaflet) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
@@ -22,6 +22,18 @@
       <p>Find smarter, faster, cheaper flights!</p>
     </header>
 
+    <!-- Show all airports button -->
+    <button class="show-airports-btn" onclick="toggleAirportList()">🔍 Show All Airports</button>
+
+    <!-- Modal -->
+    <div id="airportModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="toggleAirportList()">&times;</span>
+        <h2>All Airports</h2>
+        <ul id="airportList"></ul>
+      </div>
+    </div>
+
     <section class="search-box">
       <div class="autocomplete">
         <input type="text" id="source" placeholder="From (e.g. DEL)" autocomplete="off" />
@@ -31,6 +43,7 @@
         <input type="text" id="destination" placeholder="To (e.g. BOM)" autocomplete="off" />
         <div id="destination-list" class="autocomplete-items"></div>
       </div>
+
       <div class="buttons">
         <button onclick="fetchPaths('all')">All Routes</button>
         <button onclick="fetchPaths('cost')">Most Efficient Flights</button>
