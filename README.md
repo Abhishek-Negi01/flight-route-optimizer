@@ -60,10 +60,5 @@ FlyFi/
 
 ---
 
-## 📌 Setup Instructions
 
-### 1. Clone this repository
-```bash
-git clone https://github.com/your-username/flyfi.git
-cd flyfi
 
