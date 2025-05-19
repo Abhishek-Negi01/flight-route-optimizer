@@ -37,11 +37,11 @@ def load_flight_graph(airports_csv, routes_csv):
     return graph, coordinates
 
 
-def find_all_paths(graph, start, end, max_depth=4):
+def find_all_paths(graph, start, end, max_depth=4, max_paths=10):
     stack = [(start, [start], 0, 0)]  # (current_node, path_so_far, cost_so_far, distance_so_far)
     all_paths = []
 
-    while stack:
+    while stack and len(all_paths) < max_paths:
         current, path, cost, distance = stack.pop()
 
         if current == end:
