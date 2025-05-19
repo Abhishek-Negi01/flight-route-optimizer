@@ -37,32 +37,35 @@ def load_flight_graph(airports_csv, routes_csv):
     return graph, coordinates
 
 
-def find_all_paths(graph, start, end, max_depth=4, max_paths=10):
-    stack = [(start, [start], 0, 0)]  # (current_node, path_so_far, cost_so_far, distance_so_far)
+from collections import deque
+
+def find_all_paths(graph, start, end, max_paths=10):
     all_paths = []
+    queue = deque()
+    queue.append((start, [start], 0, 0))  # node, path, total_cost, total_distance
 
-    while stack and len(all_paths) < max_paths:
-        current, path, cost, distance = stack.pop()
+    while queue and len(all_paths) < max_paths:
+        current_node, path, total_cost, total_distance = queue.popleft()
 
-        if current == end:
-            all_paths.append({"path": path, "cost": cost, "distance": distance})
+        if current_node == end:
+            all_paths.append({
+                "path": path,
+                "cost": total_cost,
+                "distance": total_distance
+            })
             continue
 
-        if current not in graph or len(path) > max_depth:
-            continue
-
-        for edge in graph[current]:
+        for edge in graph.get(current_node, []):
             neighbor = edge["to"]
             if neighbor not in path:  # avoid cycles
-                stack.append((
+                queue.append((
                     neighbor,
                     path + [neighbor],
-                    cost + edge.get("cost", 0),
-                    distance + edge.get("distance", 0)
+                    total_cost + edge["cost"],
+                    total_distance + edge["distance"]
                 ))
 
     return sorted(all_paths, key=lambda x: x["cost"])
-
 
 
 
