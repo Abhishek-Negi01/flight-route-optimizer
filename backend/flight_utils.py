@@ -37,39 +37,41 @@ def load_flight_graph(airports_csv, routes_csv):
     return graph, coordinates
 
 
-def find_all_paths(graph, start, end, path=None, cost=0, distance=0, all_paths=None):
-    if path is None:
-        path = []
-    if all_paths is None:
-        all_paths = []
+def find_all_paths(graph, start, end, max_depth=4):
+    stack = [(start, [start], 0, 0)]  # (current_node, path_so_far, cost_so_far, distance_so_far)
+    all_paths = []
 
-    path = path + [start]
+    while stack:
+        current, path, cost, distance = stack.pop()
 
-    if start == end:
-        all_paths.append({"path": path, "cost": cost, "distance": distance})
-        return all_paths
+        if current == end:
+            all_paths.append({"path": path, "cost": cost, "distance": distance})
+            continue
 
-    if start not in graph:
-        return all_paths
+        if current not in graph or len(path) > max_depth:
+            continue
 
-    for edge in graph[start]:
-        neighbor = edge["to"]
-        if neighbor not in path:
-            find_all_paths(
-                graph, neighbor, end, path,
-                cost + edge["cost"], distance + edge["distance"],
-                all_paths
-            )
+        for edge in graph[current]:
+            neighbor = edge["to"]
+            if neighbor not in path:  # avoid cycles
+                stack.append((
+                    neighbor,
+                    path + [neighbor],
+                    cost + edge.get("cost", 0),
+                    distance + edge.get("distance", 0)
+                ))
 
     return sorted(all_paths, key=lambda x: x["cost"])
 
 
+
+
 def dijkstra(graph, start, end, key="cost"):
-    heap = [(0, 0, start, [])]  # (cost, distance, node, path)
+    heap = [(0, 0, 0, start, [])]  # (priority, cost, distance, node, path)
     visited = set()
 
     while heap:
-        total_cost, total_dist, node, path = heapq.heappop(heap)
+        priority, total_cost, total_dist, node, path = heapq.heappop(heap)
         if node in visited:
             continue
         visited.add(node)
@@ -79,9 +81,12 @@ def dijkstra(graph, start, end, key="cost"):
         for edge in graph.get(node, []):
             neighbor = edge["to"]
             if neighbor not in visited:
-                weight = edge[key]
-                new_cost = total_cost + (edge["cost"] if key == "cost" else 0)
-                new_dist = total_dist + (edge["distance"] if key == "distance" else 0)
-                heapq.heappush(heap, (new_cost if key == "cost" else new_dist, new_dist, neighbor, path))
+                cost = edge.get("cost", 0)
+                dist = edge.get("distance", 0)
+                new_cost = total_cost + cost
+                new_dist = total_dist + dist
+                new_priority = new_cost if key == "cost" else new_dist
+                heapq.heappush(heap, (new_priority, new_cost, new_dist, neighbor, path))
+
 
     return {"path": [], "cost": float("inf"), "distance": float("inf")}
