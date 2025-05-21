@@ -1,49 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <!-- Metadata and page settings -->
+  <meta charset="UTF-8" />        <!-- charachter encoding to support all charachters -->
   <title>FlyFi - Flight Route Optimizer</title>
 
-  <!-- Styles -->
+  <!-- Link external CSS stylesheet -->
   <link rel="stylesheet" href="/static/style.css" />
 
-  <!-- Map (Leaflet) -->
+  <!-- Leaflet Map library CSS and JS for interactive maps -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-  <!-- Fonts -->
+  <!-- Load Google Fonts for better typography -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <!-- Main container wrapping the whole content -->
   <div class="container">
+    <!-- Header section: logo, title, tagline -->
     <header>
       <img src="/static/logo.png" alt="FlyFi Logo" class="logo" />
       <h1>FlyFi</h1>
       <p>Find smarter, faster, cheaper flights!</p>
     </header>
 
-    <!-- Show all airports button -->
+    <!-- Button to open modal showing all airports -->
     <button class="show-airports-btn" onclick="toggleAirportList()">🔍 Show All Airports</button>
 
-    <!-- Modal -->
+    <!-- Modal popup for listing all airports -->
     <div id="airportModal" class="modal">
       <div class="modal-content">
+        <!-- Close button to hide modal -->
         <span class="close" onclick="toggleAirportList()">&times;</span>
         <h2>All Airports</h2>
+        <!-- Dynamic list of airports inserted here -->
         <ul id="airportList"></ul>
       </div>
     </div>
 
+    <!-- Section for flight search inputs and buttons -->
     <section class="search-box">
+      <!-- Autocomplete input for source airport -->
       <div class="autocomplete">
         <input type="text" id="source" placeholder="From (e.g. DEL)" autocomplete="off" />
         <div id="source-list" class="autocomplete-items"></div>
       </div>
+      <!-- Autocomplete input for destination airport -->
       <div class="autocomplete">
         <input type="text" id="destination" placeholder="To (e.g. BOM)" autocomplete="off" />
         <div id="destination-list" class="autocomplete-items"></div>
       </div>
 
+      <!-- Buttons to fetch routes based on different criteria -->
       <div class="buttons">
         <button onclick="fetchPaths('all')">All Routes</button>
         <button onclick="fetchPaths('cost')">Most Efficient Flights</button>
@@ -51,13 +60,17 @@
       </div>
     </section>
 
+    <!-- Section to display the route search results dynamically -->
     <section id="results"></section>
+
+    <!-- Container for Leaflet interactive map -->
     <div id="map" style="height: 400px; margin-top: 2rem;"></div>
   </div>
 
-  <!-- Scripts -->
+  <!-- JavaScript files controlling app logic, map, and autocomplete -->
   <script src="/static/script.js"></script>
   <script src="/static/map.js"></script>
   <script src="/static/autocomplete.js"></script>
 </body>
 </html>
+
