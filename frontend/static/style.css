@@ -1,58 +1,65 @@
+/* ==== Global Body Styling ==== */
 body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  background: #E6F3FF;
-  min-height: 100vh;
-  display: flex;
+  font-family: 'Inter', sans-serif; /* Smooth, modern sans-serif font */
+  margin: 0; /* Remove default margin */
+  background: #E6F3FF; /* Light blue background for a calm theme */
+  min-height: 100vh; /* Full viewport height to stretch to screen */
+  display: flex; /* Center the container horizontally */
   justify-content: center;
   padding: 2rem;
-  color: #003F70;
-  box-sizing: border-box;
+  color: #003F70; /* Dark blue text for contrast */
+  box-sizing: border-box; /* Include padding in width calculations */
 }
 
+/* ==== Container Box for App ==== */
 .container {
   width: 100%;
-  max-width: 850px;
-  background: #FFFFFF;
+  max-width: 850px; /* Responsive max width */
+  background: #FFFFFF; /* White background for contrast */
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(34, 184, 207, 0.2);
+  border-radius: 15px; /* Rounded corners for smooth UI */
+  box-shadow: 0 8px 20px rgba(34, 184, 207, 0.2); /* Soft shadow for depth */
   text-align: center;
   font-weight: 700;
 }
 
+/* ==== Logo Styling ==== */
 .logo {
   height: 100px;
   margin-bottom: 10px;
 }
 
+/* ==== Main Heading ==== */
 h1 {
-  color: #22B8CF;
+  color: #22B8CF; /* Bright blue */
   font-size: 2.8rem;
   font-weight: 800;
   margin: 0;
 }
 
+/* ==== Subheading Under Logo ==== */
 header p {
-  color: #005B85;
+  color: #005B85; /* Muted dark blue */
   font-size: 1.2rem;
   font-weight: 600;
   margin-top: 0.5rem;
 }
 
+/* ==== Search Box Styling ==== */
 .search-box {
-  background: #F0FAFF;
+  background: #F0FAFF; /* Light background for contrast */
   padding: 1.5rem;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  border-left: 6px solid #22B8CF;
+  gap: 1rem; /* Spacing between inputs */
+  border-left: 6px solid #22B8CF; /* Colored border for accent */
 }
 
+/* ==== Input Fields ==== */
 .search-box input {
   padding: 0.9rem;
-  border: 1px solid #B0D9FF;
+  border: 1px solid #B0D9FF; /* Subtle blue border */
   border-radius: 12px;
   font-size: 1.1rem;
   background: #F9FDFF;
@@ -62,17 +69,20 @@ header p {
   width: 100%;
 }
 
+/* ==== Placeholder Text in Input ==== */
 .search-box input::placeholder {
   color: #87C2DD;
 }
 
+/* ==== Button Container ==== */
 .buttons {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
   gap: 1rem;
   justify-content: center;
 }
 
+/* ==== Individual Button Styling ==== */
 .buttons button {
   padding: 0.8rem 1.5rem;
   font-weight: 700;
@@ -86,52 +96,58 @@ header p {
   transition: all 0.3s ease;
 }
 
+/* ==== Button Hover Effect ==== */
 .buttons button:hover {
   background-color: #1AA3B8;
-  transform: scale(1.03);
+  transform: scale(1.03); /* Slight zoom effect on hover */
 }
 
+/* ==== Result Section ==== */
 #results {
   margin-top: 1.5rem;
   text-align: left;
   font-weight: 600;
 }
 
+/* ==== Card for Each Path ==== */
 .path-card {
   background: #F5FCFF;
   padding: 1rem;
   border-left: 5px solid #22B8CF;
   border-radius: 12px;
   margin-bottom: 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
 }
 
+/* ==== Map Container ==== */
 #map {
   border-radius: 12px;
   box-shadow: 0 0 12px #22B8CF;
   height: 400px;
 }
 
-/* Autocomplete */
+/* ==== Autocomplete Container ==== */
 .autocomplete {
   position: relative;
   width: 100%;
 }
 
+/* ==== Dropdown List of Suggestions ==== */
 .autocomplete-items {
   position: absolute;
-  top: 100%;
+  top: 100%; /* Below input */
   left: 0;
   right: 0;
   background: white;
   border: 1px solid #22B8CF;
   border-top: none;
-  z-index: 1000;
+  z-index: 1000; /* Ensure it appears above everything */
   max-height: 200px;
   overflow-y: auto;
   border-radius: 0 0 10px 10px;
 }
 
+/* ==== Each Item in Autocomplete List ==== */
 .autocomplete-item {
   padding: 10px;
   cursor: pointer;
@@ -139,11 +155,13 @@ header p {
   color: #003f70;
 }
 
+/* ==== Hover Effect for Autocomplete Item ==== */
 .autocomplete-item:hover {
   background-color: #22B8CF;
   color: white;
 }
 
+/* ==== Button to Show All Airports ==== */
 .show-airports-btn {
   margin: 1rem 0;
   background: #1f8dc9;
@@ -157,8 +175,9 @@ header p {
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+/* ==== Modal Background Overlay ==== */
 .modal {
-  display: none;
+  display: none; /* Hidden by default */
   position: fixed;
   z-index: 999;
   padding-top: 60px;
@@ -167,9 +186,10 @@ header p {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.6); /* Semi-transparent black */
 }
 
+/* ==== Modal Content Box ==== */
 .modal-content {
   background-color: #fff;
   margin: auto;
@@ -181,10 +201,12 @@ header p {
   text-align: left;
 }
 
+/* ==== Modal Heading ==== */
 .modal-content h2 {
   color: #007BFF;
 }
 
+/* ==== Airport List Inside Modal ==== */
 .modal-content ul {
   list-style: none;
   padding-left: 0;
@@ -192,11 +214,13 @@ header p {
   overflow-y: auto;
 }
 
+/* ==== List Items in Modal ==== */
 .modal-content ul li {
   padding: 8px 0;
   border-bottom: 1px solid #eee;
 }
 
+/* ==== Close Button for Modal ==== */
 .close {
   float: right;
   font-size: 24px;
