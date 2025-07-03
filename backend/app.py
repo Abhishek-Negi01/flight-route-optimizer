@@ -59,12 +59,7 @@ def find_paths():
 def get_airports():        #Returns: Metadata about all airports:
     return jsonify(airport_data) #Dropdown/autocomplete in frontend, Displaying airport names in results, Plotting on Leaflet map
 
-<<<<<<< HEAD
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)  # Remove debug=True
-=======
-
-if __name__ == "__main__":        #specifies this current file as the main program to run
-    app.run(debug=True)        #Runs the server locally at: http://localhost:5000
->>>>>>> 83d3966d2089aac4dca63083c4fda48216900a85
 
